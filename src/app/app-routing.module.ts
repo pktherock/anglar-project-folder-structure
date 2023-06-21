@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PublicLayoutComponent } from './layouts/public-layout/public-layout.component';
 import { PrivateLayoutComponent } from './layouts/private-layout/private-layout.component';
 import { AuthGuard } from './core/guards/auth.guard';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -11,16 +12,19 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'auth',
+    path: '',
     component: PublicLayoutComponent,
-    loadChildren: () =>
-      import('./features/auth/auth.module').then((m) => m.AuthModule),
-  },
-
-  {
-    path: '**',
-    redirectTo: 'auth/login',
-    pathMatch: 'full',
+    children: [
+      {
+        path: 'auth',
+        loadChildren: () =>
+          import('./features/auth/auth.module').then((m) => m.AuthModule),
+      },
+      {
+        path: '**',
+        component: PageNotFoundComponent,
+      },
+    ],
   },
 
   {

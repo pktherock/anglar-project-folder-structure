@@ -10,7 +10,8 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router) {}
   ngOnInit(): void {
     // Check if user is already logged in, and if so, redirect to the home page
-    if (true) {
+    const isLoggedIn: boolean = true;
+    if (isLoggedIn) {
       // ! call function to check
       this.router.navigate(['/dashboard']); // Redirect to the home page
     }
