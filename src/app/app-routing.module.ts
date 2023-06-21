@@ -18,6 +18,12 @@ const routes: Routes = [
   },
 
   {
+    path: '**',
+    redirectTo: 'auth/login',
+    pathMatch: 'full',
+  },
+
+  {
     path: '',
     component: PrivateLayoutComponent,
     canActivate: [AuthGuard],
@@ -46,12 +52,6 @@ const routes: Routes = [
         pathMatch: 'full',
       },
     ],
-  },
-
-  {
-    path: '**',
-    redirectTo: 'auth/login',
-    pathMatch: 'full',
   },
 ];
 
