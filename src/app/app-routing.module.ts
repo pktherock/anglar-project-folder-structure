@@ -11,18 +11,15 @@ const routes: Routes = [
     redirectTo: 'auth',
     pathMatch: 'full',
   },
+
   {
-    path: '',
+    path: 'auth',
     component: PublicLayoutComponent,
     children: [
       {
-        path: 'auth',
+        path: '',
         loadChildren: () =>
           import('./features/auth/auth.module').then((m) => m.AuthModule),
-      },
-      {
-        path: '**',
-        component: PageNotFoundComponent,
       },
     ],
   },
@@ -37,11 +34,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('./features/home/home.module').then((m) => m.HomeModule),
       },
+
       {
         path: 'about',
         loadChildren: () =>
           import('./features/about/about.module').then((m) => m.AboutModule),
       },
+
       {
         path: 'contact',
         loadChildren: () =>
@@ -49,13 +48,12 @@ const routes: Routes = [
             (m) => m.ContactModule
           ),
       },
-
-      {
-        path: '**',
-        redirectTo: '/dashboard',
-        pathMatch: 'full',
-      },
     ],
+  },
+
+  {
+    path: '**',
+    component: PageNotFoundComponent,
   },
 ];
 
