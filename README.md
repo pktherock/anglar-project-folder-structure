@@ -1,12 +1,12 @@
-![Folder image1](src/assets/img/1.png)
+![Folder image1](./src/assets/img/1.png)
 
-![Folder image2](src/assets/img/2.png)
+![Folder image2](./src/assets/img/2.png)
 
-![Folder image3](src/assets/img/3.png)
+![Folder image3](./src/assets/img/3.png)
 
-![Folder image4](src/assets/img/4.png)
+![Folder image4](./src/assets/img/4.png)
 
-![Folder image5](src/assets/img/5.png)
+![Folder image5](./src/assets/img/5.png)
 # Let's go through each folder in more detail:
 ## app/core
 --> This directory contains core functionality such as guards, interceptors, models, services, and utility functions used across the application.
