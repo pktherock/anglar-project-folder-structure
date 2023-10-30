@@ -1,13 +1,15 @@
-![Folder image1](./src/assets/img/1.png)
+![Folder image1](https://github.com/pktherock/anglar-project-folder-structure/assets/59223750/f0d8103e-829e-4684-a578-f107f609c861)
 
-![Folder image2](./src/assets/img/2.png)
+![Folder image2](https://github.com/pktherock/anglar-project-folder-structure/assets/59223750/6bc46755-66b4-4df9-a060-88d01f26189e)
 
-![Folder image3](./src/assets/img/3.png)
+![Folder image3](https://github.com/pktherock/anglar-project-folder-structure/assets/59223750/125d057d-990f-4d19-bb3a-7787ae690733)
 
-![Folder image4](./src/assets/img/4.png)
+![Folder image4](https://github.com/pktherock/anglar-project-folder-structure/assets/59223750/b01c30ea-79b2-4940-8a29-f570cdf3a7cd)
 
-![Folder image5](./src/assets/img/5.png)
+![Folder image5](https://github.com/pktherock/anglar-project-folder-structure/assets/59223750/a8f5a729-6553-4be3-b189-fced064371d8)
+
 # Let's go through each folder in more detail:
+
 ## app/core
 --> This directory contains core functionality such as guards, interceptors, models, services, and utility functions used across the application.
 
